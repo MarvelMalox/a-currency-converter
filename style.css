@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: linear-gradient(135deg, #667eea, #764ba2);
+    --bg-secondary: rgba(255, 255, 255, 0.1);
+    --bg-input: rgba(255, 255, 255, 0.15);
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --border-color: rgba(255, 255, 255, 0.3);
+    --accent-primary: #715abd;
+    --accent-hover: #745eb9;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-secondary);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #7a5478;
+    font-weight: 600;
+    font-family: "Poppins";
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgb(170, 156, 209);
+}
+
+button {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    padding: 14px;
+    background-color: linear-gradient(135deg, #667eea, #764ba2);
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgb(170, 156, 209);
+}
+
+#result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--text-primary);
+}
+
+/* Responsive tweaks */
+@media (max-width: 400px) {
+    .container {
+        padding: 20px;
+    }
+    button {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
